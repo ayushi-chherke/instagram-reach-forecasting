@@ -4,7 +4,7 @@ A full-stack social media analytics platform that leverages machine learning to 
 
 ---
 
-## 🚀 Overview
+## Overview
 
 This platform analyzes Instagram performance data to generate intelligent forecasting insights, helping users understand:
 
@@ -18,13 +18,13 @@ The system combines machine learning models with interactive dashboards to trans
 
 ---
 
-## ✨ Core Features
+## Core Features
 
-### 📈 Reach Forecasting
+### Reach Forecasting
 
 Predicts estimated post reach using historical engagement and performance data.
 
-### 🤖 Machine Learning Analytics
+### Machine Learning Analytics
 
 Uses predictive models to analyze:
 
@@ -33,7 +33,7 @@ Uses predictive models to analyze:
 - Growth patterns
 - Content performance behavior
 
-### 📊 Interactive Dashboard
+### Interactive Dashboard
 
 Real-time visual analytics including:
 
@@ -42,7 +42,7 @@ Real-time visual analytics including:
 - Growth charts
 - Performance insights
 
-### 🕒 Trend & Performance Analysis
+### Trend & Performance Analysis
 
 Identifies:
 
@@ -50,17 +50,17 @@ Identifies:
 - High-performing content categories
 - Engagement fluctuations over time
 
-### 📂 Dataset Upload & Processing
+### Dataset Upload & Processing
 
 Supports structured dataset uploads for automated preprocessing and prediction generation.
 
-### 📉 Data Visualization
+### Data Visualization
 
 Interactive charts and analytics powered by modern visualization libraries for better decision-making.
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 ### Frontend
 
@@ -86,7 +86,7 @@ Interactive charts and analytics powered by modern visualization libraries for b
 
 ---
 
-## 🧠 Machine Learning Workflow
+## Machine Learning Workflow
 
 1. Data Collection & Cleaning
 2. Feature Engineering
@@ -97,7 +97,7 @@ Interactive charts and analytics powered by modern visualization libraries for b
 
 ---
 
-## 📌 Use Cases
+## Use Cases
 
 - Social media analytics
 - Influencer performance tracking
@@ -107,7 +107,7 @@ Interactive charts and analytics powered by modern visualization libraries for b
 
 ---
 
-## 🔒 Key Highlights
+## Key Highlights
 
 - Full-stack production-ready architecture
 - AI-driven forecasting system
@@ -118,7 +118,7 @@ Interactive charts and analytics powered by modern visualization libraries for b
 
 ---
 
-## 📷 Future Enhancements
+## Future Enhancements
 
 - Multi-platform analytics support
 - AI-generated content recommendations
@@ -128,6 +128,6 @@ Interactive charts and analytics powered by modern visualization libraries for b
 
 ---
 
-## 👩‍💻 Developer
+## Developer
 
 Built with a focus on scalable analytics systems, machine learning integration, and production-grade full-stack development.
