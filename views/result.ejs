@@ -1,0 +1,63 @@
+<div class="page">
+  <p class="eyebrow">✦ Prediction Complete</p>
+  <h1 class="h1">Your Reach<br><span class="grad">Forecast</span></h1>
+
+  <% if (result.reach) { %>
+
+  <div class="rg">
+    <div class="sc sc1">
+      <div class="sc-bg"></div>
+      <div class="sc-ico">📡</div>
+      <p class="sc-lbl">Predicted Reach</p>
+      <p class="sc-val counter" data-t="<%= result.reach %>"><%= result.reach %></p>
+      <div class="bar"><div class="bfill"></div></div>
+    </div>
+    <div class="sc sc2">
+      <div class="sc-bg"></div>
+      <div class="sc-ico">❤️</div>
+      <p class="sc-lbl">Estimated Likes</p>
+      <p class="sc-val counter" data-t="<%= result.likes %>"><%= result.likes %></p>
+      <div class="bar"><div class="bfill"></div></div>
+    </div>
+    <div class="sc sc3">
+      <div class="sc-bg"></div>
+      <div class="sc-ico">💬</div>
+      <p class="sc-lbl">Estimated Comments</p>
+      <p class="sc-val counter" data-t="<%= result.comments %>"><%= result.comments %></p>
+      <div class="bar"><div class="bfill"></div></div>
+    </div>
+  </div>
+
+  <div class="ins-card anim" style="--d:.44s">
+    <p class="ins-t">💡 Quick Insight</p>
+    <p class="ins-p">Based on your inputs, posting at the right time with strong hashtags can further boost your reach by up to <strong>20%</strong>. Check the Insights page for detailed tips.</p>
+    <a href="/forecast" class="btn-s">View Posting Tips →</a>
+  </div>
+
+  <% } else { %>
+
+  <div class="err-card anim" style="--d:.3s">
+    <div class="err-ico">⚠️</div>
+    <h3>Something went wrong</h3>
+    <p class="err-msg"><%= result.reach %></p>
+  </div>
+
+  <% } %>
+
+  <div class="back-wrap">
+    <a href="/" class="btn-ghost">← Back to Prediction Form</a>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.counter').forEach(function(el) {
+    var target = parseInt(el.dataset.t, 10);
+    if (isNaN(target)) return;
+    var cur = 0, step = target / 60;
+    var t = setInterval(function() {
+      cur += step;
+      if (cur >= target) { el.textContent = target.toLocaleString(); clearInterval(t); return; }
+      el.textContent = Math.floor(cur).toLocaleString();
+    }, 16);
+  });
+</script>

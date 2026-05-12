@@ -1,0 +1,75 @@
+<div class="page">
+  <p class="eyebrow">✦ AI-Powered Analytics</p>
+  <h1 class="h1">Forecast Your<br><span class="grad">Instagram Reach</span></h1>
+  <p class="sub">Fill in your post details and let our model predict your reach, likes and engagement before you hit publish.</p>
+
+  <div class="card">
+    <div class="card-glow"></div>
+
+    <form action="/predict" method="POST" enctype="multipart/form-data" class="pform" id="pform">
+
+      <div class="fg1 anim" style="--d:.38s">
+        <label class="fl">✍️ Caption</label>
+        <textarea class="fi" name="caption" placeholder="Write your caption here..." required></textarea>
+      </div>
+
+      <div class="fg2">
+        <div class="fgroup anim" style="--d:.44s">
+          <label class="fl">👥 Followers</label>
+          <input class="fi" name="followers" type="number" placeholder="e.g. 7000" required>
+        </div>
+        <div class="fgroup anim" style="--d:.50s">
+          <label class="fl">🌍 Region</label>
+          <input class="fi" name="region" type="text" placeholder="e.g. US, IN" required>
+        </div>
+      </div>
+
+      <div class="fg2">
+        <div class="fgroup anim" style="--d:.56s">
+          <label class="fl">#️⃣ Hashtags</label>
+          <input class="fi" name="hashtags" type="text" placeholder="#fun, #travel, #photography" required>
+        </div>
+        <div class="fgroup anim" style="--d:.62s">
+          <label class="fl">🕐 Post Time</label>
+          <input class="fi" name="postTime" type="datetime-local" required>
+        </div>
+      </div>
+
+      <div class="fg2">
+        <div class="fgroup anim" style="--d:.68s">
+          <label class="fl">🎯 Goal <span class="opt">optional</span></label>
+          <input class="fi" name="engagementGoal" type="number" placeholder="e.g. 5000">
+        </div>
+        <div class="fgroup anim" style="--d:.74s">
+          <label class="fl">📸 Media <span class="opt">optional</span></label>
+          <div class="file-wrap" id="fw">
+            <input class="fi file-input" name="media" type="file" accept="image/*,video/*" id="mi">
+            <div class="file-ph"><span class="file-ico">⬆</span><span id="ft">Drop image or video</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="factions anim" style="--d:.80s">
+        <button type="submit" class="btn" id="sbtn">
+          <span class="btn-t">Predict My Reach</span>
+          <span class="arr">→</span>
+          <div class="shim"></div>
+        </button>
+        <span class="fnote">Results appear instantly — no account needed</span>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<script>
+  document.getElementById('mi').addEventListener('change', function() {
+    document.getElementById('ft').textContent = this.files[0] ? this.files[0].name : 'Drop image or video';
+    document.getElementById('fw').classList.add('has-file');
+  });
+  document.getElementById('pform').addEventListener('submit', function() {
+    var b = document.getElementById('sbtn');
+    b.classList.add('loading');
+    b.querySelector('.btn-t').textContent = 'Analyzing...';
+  });
+</script>
