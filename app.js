@@ -6,7 +6,7 @@ const expressLayouts = require('express-ejs-layouts'); //ejs layout ke liye
 const multer = require('multer');  //temporary file storage 
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.urlencoded({ extended: true }));  //forms & json data ko parse krne ke liye (complex html code handels )
@@ -57,8 +57,7 @@ const { caption, hashtags, postTime, region, engagementGoal, followers } = req.b
     ...(engagementGoal ? { engagementGoal: parseInt(engagementGoal) } : {})
   };
 
-  const py = spawn('python3', ['reach_predictor.py', JSON.stringify(inputData)]);
-
+  const py = spawn('python', ['reach_predictor.py', JSON.stringify(inputData)]);
   let result = '';
 
 //Python script ne kya output diya terminal me.
