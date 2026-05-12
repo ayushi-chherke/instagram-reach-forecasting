@@ -3,17 +3,19 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "A full-stack social media analytics platform that leverages machine learning to forecast Instagram post reach, engagement trends, and audience performance metrics. Built to help creators, influencers, and marketing teams make data-driven content decisions through predictive analytics and interactive visualizations.",
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^5.1.0",
     "express-ejs-layouts": "^2.5.1",
     "multer": "^1.4.5-lts.2",
     "python-shell": "^5.0.0"
-  }
+  },
+  "devDependencies": {}
 }
